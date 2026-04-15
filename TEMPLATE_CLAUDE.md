@@ -174,10 +174,13 @@ Structure:
 Each DAY.md must contain FULL INSTRUCTIONS for the day's work. Required content:
 
 1. **Header**: Day number, date, track, domain, task ID, expected output
-2. **Today's Goal**: 1-2 sentences explaining success
-3. **Background**: Why this topic matters, connection to epic + phase goal + primary goal
-4. **Resources**: 1-2 relevant references for today's topic
-5. **Sessions**: 1-4 sessions depending on `SCHED_SESSIONS_PER_DAY`:
+2. **MODE**: PRACTICE | CREATION | REFINE (exactly one)
+3. **Success Condition**: Non-quality completion criterion (e.g. "3 repetitions finished", "8-bar loop ends on beat 1", "script runs without errors") — never "looks/sounds/feels good"
+4. **Scope Lock**: If MODE is CREATION, declare the single initial choice that is locked for the session (starter file, kit, dataset, reference, palette). Otherwise `N/A`.
+5. **Today's Goal**: 1-2 sentences explaining success
+6. **Background**: Why this topic matters, connection to epic + phase goal + primary goal
+7. **Resources**: 1-2 relevant references for today's topic
+8. **Sessions**: 1-4 sessions depending on `SCHED_SESSIONS_PER_DAY`:
 
 | Sessions/Day | Labels |
 |--------------|--------|
@@ -191,9 +194,9 @@ Each session has:
 - **Do this**: Step-by-step actions (specific, concrete, actionable without external help)
 - **Capture**: What to write down
 
-6. **Progress Log**: User fills after each session (Recall, Notes, Insight)
-7. **Tomorrow Hook**: What carries forward to the next day
-8. **Celebration marker** (if Day 50/100/200/etc): reflection prompt
+9. **Progress Log**: User fills after each session (Recall, Notes, Insight)
+10. **Tomorrow Hook**: What carries forward to the next day
+11. **Celebration marker** (if Day 50/100/200/etc): reflection prompt
 
 ## Cross-Domain Transfer
 {{IF TRACK_ENABLED}}
@@ -272,6 +275,36 @@ Life happens. Don't let a disruption become abandonment.
 1. Ask AI: "I paused for X weeks. Help me re-plan."
 2. AI may: (a) repeat last completed week, (b) shift roadmap forward, (c) trigger Emergency Simplification for next week
 3. Update state.json + LEARNING_HISTORY.md
+
+---
+
+## Execution Modes (anti-perfectionism layer)
+
+Every DAY declares exactly one mode. Modes do not mix within a session. This prevents the common failure loop where the learner enters polishing mode during learning and gets stuck in perfectionism or tool-hopping.
+
+Strict enforcement: {{ANTI_PERFECTIONISM_STRICT}} (yes/no — set from interview Section H)
+
+| Mode | Goal | Allowed | Forbidden |
+|------|------|---------|-----------|
+| PRACTICE | Build muscle memory / workflow / fluency | Repetition, basic usage, defaults | Tweaking quality, swapping inputs, restarts |
+| CREATION | Finish a piece of work end-to-end | Using chosen inputs, arranging, shipping | Replacing the initial choice once locked |
+| REFINE | Improve quality of ONE element | Iteration, A/B, targeted improvement | Building a full artifact, composing, scope creep |
+
+### Core rules (apply when strict mode is ON)
+- **First acceptable = final.** In CREATION, the first input that works (starter file, kit, reference, dataset, sample text, palette) is locked for the session. No swapping mid-session.
+- **Rough is success.** In PRACTICE and CREATION, ugly/boring/basic output still counts as completion. Quality is judged only in REFINE sessions or at retrospective time.
+- **No tool escaping.** If the primary tool feels limiting mid-session, log it in the Doubt Log and finish with current setup. Do not switch to a different tool to "fix" the output. Quality fixes happen in a separate REFINE session.
+- **Safe starter set.** Learner maintains 2-3 pre-picked defaults per domain (starter template, go-to reference, default library/kit/palette). Reuse for an entire phase. No hunting for new defaults mid-session.
+- **Frustration protocol.** If you want to restart or switch tools: don't. Finish the session. Log: *what I wanted to change / why I couldn't / what I learned anyway.*
+
+Success = session completed per its MODE and Success Condition. Not "is the output good."
+
+### Mode assignment guidance for the generator
+- PRACTICE: foundational days (weeks 1-2 of any phase), theory/anatomy/analysis days, workflow/tool-navigation days, review/retro days
+- CREATION: days that produce a genre piece / finished sketch / end-to-end artifact / shipped deliverable
+- REFINE: days explicitly about polishing one element (mixing, editing, debugging a specific component, refactoring one function, revising one paragraph)
+
+When in doubt: default to PRACTICE in Phase 1, CREATION in Phase 2+.
 
 ---
 

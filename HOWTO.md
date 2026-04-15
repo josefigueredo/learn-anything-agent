@@ -13,6 +13,7 @@ Complete guide to every feature, workflow, and file. Read top-to-bottom for firs
 5. [Monthly Workflow](#monthly-workflow)
 6. [Phase Transitions](#phase-transitions)
 7. [The 10 Built-in Systems](#the-10-built-in-systems)
+7a. [Execution Modes (anti-perfectionism)](#execution-modes-anti-perfectionism)
 8. [Calibration Day (Day 0)](#calibration-day-day-0)
 9. [Checkpoint Days (every 4 weeks)](#checkpoint-days)
 10. [Doubt Log](#doubt-log)
@@ -240,6 +241,57 @@ Plus **5 enhancements** (what this doc adds):
 | 18 | Difficulty Ramp Graph | ROADMAP.md |
 | 19 | Smart Task IDs | GENERATOR rules |
 | 20 | Prompt-Chained Generation | GENERATOR stages |
+| 21 | Execution Modes (anti-perfectionism) | DAY.md header + CLAUDE.md |
+
+---
+
+## Execution Modes (anti-perfectionism)
+
+The framework enforces strict separation between three mental states. Every DAY.md declares exactly one mode, and the rules for that mode apply for the whole session.
+
+| Mode | Goal | Allowed | Forbidden |
+|------|------|---------|-----------|
+| **PRACTICE** | Muscle memory, workflow fluency | Repetition, defaults, rough output | Tweaking quality, swapping inputs |
+| **CREATION** | Finish an end-to-end artifact | Using locked inputs, shipping | Replacing the initial choice mid-session |
+| **REFINE** | Polish ONE element | Iteration, A/B, targeted fixes | Building a full artifact, scope creep |
+
+### Why this exists
+
+Without mode separation, learners hit a common failure loop:
+
+> choose input → output looks rough → try to fix → skill not there yet → switch tool → repeat
+
+The modes prevent this by declaring *before* the session starts what kind of work is happening. Quality is only judged in REFINE sessions — everywhere else, completion is the only success criterion.
+
+### Core rules (when strict mode is ON — Interview Section H)
+
+- **First acceptable = final.** In CREATION, the first workable input is locked for the session. No hunting for a better one.
+- **Rough is success.** PRACTICE and CREATION artifacts can be ugly and still count.
+- **No tool escaping.** If the tool feels limiting, log it in the Doubt Log and finish anyway. Don't switch tools to escape.
+- **Safe starter set.** Pick 2-3 defaults per phase (template, reference, kit, dataset, palette) and reuse them. Configured in Interview Section H Q35.
+- **Frustration protocol.** Want to restart? Don't. Finish the session and log *what I wanted to change / why I couldn't / what I learned anyway*.
+
+### Cross-domain examples
+
+| Domain | PRACTICE day | CREATION day | REFINE day |
+|--------|--------------|--------------|------------|
+| Music production | "SP-404 sampling workflow" | "Finish 16-bar lofi loop" | "Improve kick drum with EQ + saturation" |
+| Programming | "Learn Python list comprehensions" | "Ship a CLI script that parses a CSV" | "Refactor one function for readability" |
+| Language (Spanish) | "Drill 20 irregular verbs" | "Write a 1-paragraph journal entry" | "Revise yesterday's entry with native-speaker phrasing" |
+| Visual art | "30 thumbnail sketches" | "Finish one value study, single session" | "Glaze the shadows on last week's piece" |
+
+### Mode assignment cheat sheet
+
+- Week 1 of any phase → mostly PRACTICE
+- Genre / production / end-to-end days → CREATION
+- Days explicitly about mixing/editing/debugging/revising ONE thing → REFINE
+- Review / retrospective / theory days → PRACTICE
+
+When ambiguous: default PRACTICE in Phase 1, CREATION in Phase 2+.
+
+### Opting out
+
+If Interview Section H Q34 answered "no", modes are still declared on each DAY but treated as guidance rather than hard constraint. First-acceptable-is-final and Scope Lock become recommendations, not rules.
 
 ---
 

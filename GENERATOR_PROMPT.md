@@ -99,6 +99,9 @@ Load `TEMPLATE_DAY.md`. For each session's "Do this" section:
 ```
 
 Additional DAY.md fields:
+- **MODE**: exactly one of PRACTICE / CREATION / REFINE. Infer using the guidance in CLAUDE.md "Execution Modes" section. Heuristic: foundational/anatomy/theory/workflow days → PRACTICE; end-to-end production days → CREATION; isolated polishing of one element → REFINE. Default Phase 1 → PRACTICE, Phase 2+ → CREATION, when ambiguous.
+- **Success Condition**: one line, completion-framed, NOT quality-framed. Good: "8-bar loop records clean start to end", "script prints expected output", "50 new words reviewed". Bad: "loop sounds good", "script is elegant", "pronunciation is correct". Derive from Expected Output by asking "what action proves this was completed?"
+- **Scope Lock**: if MODE == CREATION, name the single locked input (starter file, kit, reference, dataset, palette, vocabulary set) drawn from `{{SAFE_STARTER_SET}}` if available. If MODE != CREATION, write `N/A`.
 - **Tomorrow Hook**: Must connect to the next day's topic — brief, specific
 - **Resources**: 1-2 relevant links/references for today's topic
 - **Cross-Track Note** (if parallel tracks): what the other track is doing this week, how today's topic relates
@@ -152,6 +155,7 @@ Before delivering, verify:
 - [ ] KANBAN has all epics for all phases
 - [ ] Month 1 has all weeks and days populated
 - [ ] Every DAY.md has fully written session instructions (not templates)
+- [ ] Every DAY.md declares a MODE (PRACTICE | CREATION | REFINE), Success Condition (completion-framed, not quality-framed), and Scope Lock (concrete for CREATION, N/A otherwise)
 - [ ] Session count in each DAY matches `SCHED_SESSIONS_PER_DAY`
 - [ ] Session duration matches `SCHED_SESSION_DURATION_MIN`
 - [ ] Flex days are marked as FLEX in WEEK tables

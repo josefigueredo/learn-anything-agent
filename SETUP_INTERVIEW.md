@@ -177,6 +177,17 @@ Maps to: Resources section, community.
 
 **Validation**: If no resources provided, the generator uses its own suggestions per day. Teaching mode defaults to `hybrid` if unspecified.
 
+34. **Do you struggle with perfectionism, tool-hopping, or restarting mid-task?** (Y/N)
+    - If YES → `{{ANTI_PERFECTIONISM_STRICT}} = yes`. Execution Modes (PRACTICE / CREATION / REFINE) are enforced strictly: first-acceptable-is-final, no tool escaping, Scope Lock mandatory for CREATION days.
+    - If NO → `{{ANTI_PERFECTIONISM_STRICT}} = no`. Modes are still declared on each DAY but treated as guidance rather than hard constraint.
+    - Default if unsure: `yes` (strict mode helps more than it hurts).
+    → `{{ANTI_PERFECTIONISM_STRICT}}`
+
+35. **Name 2-3 "safe starter defaults" you'll reuse this phase instead of hunting each session.** (e.g., "starter Python template", "these 3 drum kits", "this reference palette", "this vocabulary list") — prevents mid-session decision paralysis. Can be filled later if unknown now.
+    → `{{SAFE_STARTER_SET}}`
+
+**Validation**: If strict mode = yes and safe starter set is empty, flag it — the generator will prompt the learner to pick before Day 1.
+
 ---
 
 ## Section I — Difficulty & Progression

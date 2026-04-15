@@ -5,6 +5,9 @@
 **Domain**: {{DOMAIN_AREA}}
 **Task**: {{TASK_ID}}
 **Expected Output**: {{ARTIFACT_DESCRIPTION}}
+**MODE**: {{PRACTICE | CREATION | REFINE}}
+**Success Condition**: {{NON_QUALITY_COMPLETION_CRITERION}}
+**Scope Lock**: {{IF MODE == CREATION: initial_choice_locked_for_session; ELSE: N/A}}
 
 {{IF CROSS_TRACK}}
 **Cross-Track Note**: This day mirrors {{OTHER_TRACK_NAME}} Day {{OTHER_DAY_N}} — {{CONNECTION_DESCRIPTION}}
